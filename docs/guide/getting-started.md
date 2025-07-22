@@ -1,23 +1,6 @@
-# Getting Started
+# Quick Start
 
-Welcome to TouchX UI! This guide will help you get started with our beautiful touchable animation component library.
-
-## Installation
-
-### NPM
-```bash
-npm install @talex-touch/touchx-ui
-```
-
-### Yarn
-```bash
-yarn add @talex-touch/touchx-ui
-```
-
-### PNPM
-```bash
-pnpm add @talex-touch/touchx-ui
-```
+This guide assumes you have already [installed TouchX UI](/guide/installation). Let's get you up and running with your first TouchX UI components!
 
 ## Usage
 
@@ -68,25 +51,66 @@ const handleClick = () => {
 ```
 
 
-## Features
+## Your First Component
 
-TouchX UI provides a comprehensive set of features:
+Let's start with a simple button:
 
-- **🎭 Vivid Touch Experience**: Lifelike touch feedback through precision physics engine
-- **🌊 Smooth Animations**: 60fps fluid experience with Bézier curves and physics animations
-- **✨ Modern Visual Language**: Glassmorphism aesthetics with dynamic lighting
-- **⚡ Performance Optimized**: Vue3 Composition API with Tree Shaking support
-- **🎨 Enterprise Design System**: Complete Design Tokens system
-- **🚀 Cross-Platform Ready**: Responsive design for all devices
+```vue
+<template>
+  <TxButton type="primary" @click="handleClick">
+    Hello TouchX UI! ✨
+  </TxButton>
+</template>
+
+<script setup>
+import { TxButton } from '@talex-touch/touchx-ui'
+
+const handleClick = () => {
+  alert('Welcome to TouchX UI!')
+}
+</script>
+```
+
+## Multiple Components
+
+Here's how to use multiple components together:
+
+```vue
+<template>
+  <div class="user-card">
+    <TxAvatar
+      :src="user.avatar"
+      size="large"
+      :alt="user.name"
+    />
+    <h3>{{ user.name }}</h3>
+    <TxButton type="primary" @click="viewProfile">
+      View Profile
+    </TxButton>
+  </div>
+</template>
+
+<script setup>
+import { TxButton, TxAvatar } from '@talex-touch/touchx-ui'
+
+const user = {
+  name: 'John Doe',
+  avatar: 'https://example.com/avatar.jpg'
+}
+
+const viewProfile = () => {
+  // Handle profile view
+}
+</script>
+```
 
 ## TypeScript Support
 
-TouchX UI is built with TypeScript and provides full type definitions:
+TouchX UI provides full TypeScript support out of the box:
 
 ```typescript
-import type { TxButtonProps, TxAvatarProps } from '@talex-touch/touchx-ui'
+import type { TxButtonProps } from '@talex-touch/touchx-ui'
 
-// Full type safety
 const buttonProps: TxButtonProps = {
   type: 'primary',
   size: 'large',
@@ -94,27 +118,108 @@ const buttonProps: TxButtonProps = {
 }
 ```
 
-## Browser Support
+## Component Props and Events
 
-TouchX UI supports all modern browsers:
+TouchX UI components are fully typed and provide excellent IntelliSense:
 
-- Chrome >= 87
-- Firefox >= 78
-- Safari >= 14
-- Edge >= 88
+```vue
+<template>
+  <!-- Props are fully typed -->
+  <TxButton
+    :type="buttonType"
+    :size="buttonSize"
+    :loading="isLoading"
+    @click="handleClick"
+  >
+    {{ buttonText }}
+  </TxButton>
+</template>
 
-## Next Steps
+<script setup lang="ts">
+import { ref } from 'vue'
+import { TxButton } from '@talex-touch/touchx-ui'
+import type { TxButtonProps } from '@talex-touch/touchx-ui'
 
-Now that you have TouchX UI installed, you can:
+const buttonType = ref<TxButtonProps['type']>('primary')
+const buttonSize = ref<TxButtonProps['size']>('medium')
+const isLoading = ref(false)
+const buttonText = ref('Click me!')
 
-1. **Explore Components**: Check out our [component library](/components/) to see all available components
-2. **Learn Design Principles**: Understand our [design philosophy](/guide/design-philosophy)
-3. **Customize Themes**: Learn about [theming](/guide/theming) to match your brand
-4. **View Examples**: Try our [playground](/playground/) for interactive examples
+const handleClick = () => {
+  isLoading.value = true
+  // Simulate async operation
+  setTimeout(() => {
+    isLoading.value = false
+  }, 2000)
+}
+</script>
+```
 
-## Need Help?
+## Common Patterns
 
-- 📖 [Documentation](https://touchx-ui.talex.cn)
+### Form Components
+```vue
+<template>
+  <form @submit.prevent="handleSubmit">
+    <TxInput
+      v-model="form.name"
+      placeholder="Enter your name"
+      :error="errors.name"
+    />
+    <TxButton type="primary" html-type="submit">
+      Submit
+    </TxButton>
+  </form>
+</template>
+```
+
+### Layout Components
+```vue
+<template>
+  <TxContainer>
+    <TxCard>
+      <TxAvatar :src="user.avatar" />
+      <h3>{{ user.name }}</h3>
+    </TxCard>
+  </TxContainer>
+</template>
+```
+
+## What's Next?
+
+Now that you've got the basics, here's what to explore:
+
+### 🧩 **Explore Components**
+- **[Button](/components/button)** - Interactive buttons with animations
+- **[Avatar](/components/avatar)** - User profile pictures and placeholders
+- **[Card](/components/card)** - Content containers with glassmorphism
+- **[Input](/components/input)** - Form inputs with smooth focus effects
+
+### 🎨 **Customize Your Theme**
+```vue
+<template>
+  <TxButton
+    type="primary"
+    class="custom-button"
+  >
+    Custom Styled Button
+  </TxButton>
+</template>
+
+<style scoped>
+.custom-button {
+  --tx-primary-color: #6366f1;
+  --tx-border-radius: 12px;
+}
+</style>
+```
+
+### 🚀 **Advanced Usage**
+- **[Design System](/design/)** - Understand our design principles
+- **[Theming Guide](/guide/theming)** - Deep customization
+- **[Playground](/playground/)** - Interactive component explorer
+
+### 💡 **Get Help**
 - 🐛 [Report Issues](https://github.com/talex-touch/touchx-ui/issues)
-- 💬 [Discussions](https://github.com/talex-touch/touchx-ui/discussions)
-- 📧 [Contact Us](mailto:support@talex.cn)
+- 💬 [Join Discussions](https://github.com/talex-touch/touchx-ui/discussions)
+- 📖 [Full Documentation](https://touchx-ui.talex.cn)
