@@ -36,7 +36,6 @@ export default defineConfig({
     nav: [
       { text: 'Guide', link: '/guide/introduction', activeMatch: '/guide/' },
       { text: 'Components', link: '/components/', activeMatch: '/components/' },
-      { text: 'Design', link: '/design/', activeMatch: '/design/' },
       {
         text: 'Resources',
         items: [
