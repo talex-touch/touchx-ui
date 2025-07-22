@@ -29,35 +29,35 @@ export const sidebar = {
   ],
   '/components/': [
     {
-      text: 'Basic Components',
+      text: '基础组件',
       items: [
-        { text: 'Button', link: '/components/button' },
-        { text: 'Avatar', link: '/components/avatar' },
-        { text: 'Icon', link: '/components/icon' }
+        { text: 'Button 按钮', link: '/components/button' },
+        { text: 'Avatar 头像', link: '/components/avatar' },
+        { text: 'Icon 图标', link: '/components/icon' }
       ]
     },
     {
-      text: 'Layout Components',
+      text: '布局组件',
       items: [
-        { text: 'Card', link: '/components/card' },
-        { text: 'Container', link: '/components/container' },
-        { text: 'Grid', link: '/components/grid' }
+        { text: 'Card 卡片', link: '/components/card' },
+        { text: 'Container 容器', link: '/components/container' },
+        { text: 'Grid 栅格', link: '/components/grid' }
       ]
     },
     {
-      text: 'Interactive Components',
+      text: '交互组件',
       items: [
-        { text: 'Slider', link: '/components/slider' },
-        { text: 'Switch', link: '/components/switch' },
-        { text: 'Input', link: '/components/input' }
+        { text: 'Input 输入框', link: '/components/input' },
+        { text: 'Switch 开关', link: '/components/switch' },
+        { text: 'Slider 滑块', link: '/components/slider' }
       ]
     },
     {
-      text: 'Feedback Components',
+      text: '反馈组件',
       items: [
-        { text: 'Toast', link: '/components/toast' },
-        { text: 'Modal', link: '/components/modal' },
-        { text: 'Loading', link: '/components/loading' }
+        { text: 'Toast 提示', link: '/components/toast' },
+        { text: 'Modal 模态框', link: '/components/modal' },
+        { text: 'Loading 加载', link: '/components/loading' }
       ]
     }
   ],
