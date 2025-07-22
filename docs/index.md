@@ -1,21 +1,21 @@
 ---
 layout: home
 title: TouchX UI
-titleTemplate: 可触摸的美丽动效
+titleTemplate: Beautiful Touchable Animations
 
 hero:
   name: TouchX UI
-  text: 可触摸的美丽动效
-  tagline: 生动如生命般的 Vue3 组件库，让每一次交互都充满生命力
+  text: Beautiful Touchable Animations
+  tagline: A lifelike Vue3 component library that brings vitality to every interaction
   image:
     src: https://i.imgur.com/pd3YUxf.png
     alt: TouchX UI Logo
   actions:
     - theme: brand
-      text: 快速开始
+      text: Get Started
       link: /guide/getting-started
     - theme: alt
-      text: 组件预览
+      text: Components
       link: /components/
     - theme: alt
       text: GitHub
@@ -23,22 +23,21 @@ hero:
 
 features:
   - icon: 🎭
-    title: 生动触感体验
-    details: 通过精密物理引擎实现生命般的触摸反馈，让每次交互都自然生动。
+    title: Vivid Touch Experience
+    details: Achieve lifelike touch feedback through precision physics engine, making every interaction natural and vivid.
   - icon: 🌊
-    title: 丝滑动效系统
-    details: 基于贝塞尔曲线和物理动画的 60fps 流畅体验，确保视觉连贯性。
-  - icon: �
-    title: 现代视觉语言
-    details: 玻璃态美学配合动态光影和材质模拟，为数字界面带来真实质感。
+    title: Smooth Animation System
+    details: 60fps fluid experience based on Bézier curves and physics animations, ensuring visual continuity.
+  - icon: ✨
+    title: Modern Visual Language
+    details: Glassmorphism aesthetics combined with dynamic lighting and material simulation, bringing real texture to digital interfaces.
   - icon: ⚡
-    title: 性能优化
-    details: Vue3 Composition API 配合 Tree Shaking 支持，减少 50%+ 包体积。
+    title: Performance Optimized
+    details: Vue3 Composition API with Tree Shaking support, reducing bundle size by 50%+.
   - icon: 🎨
-    title: 企业级设计系统
-    details: 完整 Design Tokens 体系支持无缝主题切换，遵循无障碍标准。
-  - icon: �
-    title: 跨平台就绪
-    details: 响应式设计适配所有设备，PWA 和 SSR 友好，一套代码适配全平台。
+    title: Enterprise Design System
+    details: Complete Design Tokens system supporting seamless theme switching, following accessibility standards.
+  - icon: 🚀
+    title: Cross-Platform Ready
+    details: Responsive design for all devices, PWA and SSR friendly, one codebase for all platforms.
 ---
-

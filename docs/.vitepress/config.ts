@@ -3,14 +3,14 @@ import { sidebar } from './config/sidebar'
 
 export default defineConfig({
   title: 'TouchX UI',
-  description: '可触摸的美丽动效 · 生动如生命般的 Vue3 组件库',
+  description: 'Beautiful Touchable Animations · A lifelike Vue3 component library',
   base: '/',
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/touchx-logo-transparent.png' }],
     ['meta', { name: 'theme-color', content: '#ff6b6b' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:locale', content: 'zh-CN' }],
-    ['meta', { property: 'og:title', content: 'TouchX UI | 可触摸的美丽动效' }],
+    ['meta', { property: 'og:locale', content: 'en-US' }],
+    ['meta', { property: 'og:title', content: 'TouchX UI | Beautiful Touchable Animations' }],
     ['meta', { property: 'og:site_name', content: 'TouchX UI' }],
     ['meta', { property: 'og:image', content: '/touchx-logo-transparent.png' }],
     ['meta', { property: 'og:url', content: 'https://touchx-ui.talex.cn/' }],
@@ -26,7 +26,7 @@ export default defineConfig({
 
     editLink: {
       pattern: 'https://github.com/talex-touch/touchx-ui/edit/main/docs/:path',
-      text: '在 GitHub 上编辑此页面'
+      text: 'Edit this page on GitHub'
     },
 
     socialLinks: [
@@ -34,30 +34,23 @@ export default defineConfig({
     ],
 
     nav: [
-      { text: '指南', link: '/guide/getting-started', activeMatch: '/guide/' },
-      { text: '组件', link: '/components/', activeMatch: '/components/' },
-      { text: '设计', link: '/design/', activeMatch: '/design/' },
+      { text: 'Guide', link: '/guide/getting-started', activeMatch: '/guide/' },
+      { text: 'Components', link: '/components/', activeMatch: '/components/' },
+      { text: 'Design', link: '/design/', activeMatch: '/design/' },
       {
-        text: '资源',
+        text: 'Resources',
         items: [
           { text: 'GitHub', link: 'https://github.com/talex-touch/touchx-ui' },
           { text: 'NPM', link: 'https://www.npmjs.com/package/@talex-touch/touchx-ui' },
           { text: 'Playground', link: '/playground/' },
-          { text: '更新日志', link: 'https://github.com/talex-touch/touchx-ui/releases' },
+          { text: 'Changelog', link: 'https://github.com/talex-touch/touchx-ui/releases' },
           {
             items: [
-              { text: 'Vue 3', link: 'https://cn.vuejs.org/' },
+              { text: 'Vue 3', link: 'https://vuejs.org/' },
               { text: 'VitePress', link: 'https://vitepress.dev/' },
               { text: 'TypeScript', link: 'https://www.typescriptlang.org/' }
             ]
           }
-        ]
-      },
-      {
-        text: '语言',
-        items: [
-          { text: '简体中文', link: '/' },
-          { text: 'English', link: '/en/' }
         ]
       }
     ],
@@ -69,15 +62,15 @@ export default defineConfig({
       options: {
         translations: {
           button: {
-            buttonText: '搜索文档',
-            buttonAriaLabel: '搜索文档'
+            buttonText: 'Search',
+            buttonAriaLabel: 'Search'
           },
           modal: {
-            noResultsText: '无法找到相关结果',
-            resetButtonTitle: '清除查询条件',
+            noResultsText: 'No results found',
+            resetButtonTitle: 'Clear search query',
             footer: {
-              selectText: '选择',
-              navigateText: '切换'
+              selectText: 'Select',
+              navigateText: 'Navigate'
             }
           }
         }
