@@ -1,10 +1,15 @@
 import component from './src/button.vue'
 import { withInstall } from '../../../utils/withInstall'
-  
-const VcButton = withInstall(component)
-  
+import type { ButtonProps, ButtonEmits } from './src/types'
+
+const TxButton = withInstall(component)
+
 export {
-  VcButton
+  TxButton
 }
-  
-export default VcButton
+
+export type TxButtonProps = ButtonProps
+export type TxButtonEmits = ButtonEmits
+export type TxButtonInstance = InstanceType<typeof component>
+
+export default TxButton
