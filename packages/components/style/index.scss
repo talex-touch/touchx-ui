@@ -1,1 +1,32 @@
 @import url('../src/button/src/style/index.scss');
+
+
+// .touch-blur
+.fake-background {
+  &:before {
+    opacity: var(--fake-opacity, 0.75) !important;
+  }
+}
+
+.fake-background.index-fix {
+  z-index: var(--fake-fix-index, 0);
+}
+
+.fake-background {
+  &:before {
+    z-index: var(--fake-index, -1);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: var(--fake-inner-opacity, 1);
+    background: var(--fake-color, var(--el-fill-color-lighter));
+    border-radius: var(--fake-radius, inherit);
+  }
+
+  position: relative; // make sure background adapt to parent
+
+  border-radius: 12px;
+}

@@ -56,20 +56,20 @@ const handleClick = (event: MouseEvent) => {
     let vibrateType = props.vibrateType;
     if (!vibrateType) {
       switch (props.type) {
-        case 'primary':
-          vibrateType = 'medium';
+        case "primary":
+          vibrateType = "medium";
           break;
-        case 'success':
-          vibrateType = 'success';
+        case "success":
+          vibrateType = "success";
           break;
-        case 'warning':
-          vibrateType = 'warning';
+        case "warning":
+          vibrateType = "warning";
           break;
-        case 'danger':
-          vibrateType = 'error';
+        case "danger":
+          vibrateType = "error";
           break;
         default:
-          vibrateType = 'light';
+          vibrateType = "light";
       }
     }
     useVibrate(vibrateType);

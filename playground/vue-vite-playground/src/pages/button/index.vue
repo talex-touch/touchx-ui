@@ -13,16 +13,22 @@ const handleClick = () => {
 </script>
 
 <template>
-  <div style="padding: 20px;">
-    <h2>基础用法</h2>
-    <div class="group">
-      <TxButton>默认按钮</TxButton>
-      <TxButton type="primary">主要按钮</TxButton>
-      <TxButton type="success">成功按钮</TxButton>
-      <TxButton type="info">信息按钮</TxButton>
-      <TxButton type="warning">警告按钮</TxButton>
-      <TxButton type="danger">危险按钮</TxButton>
-    </div>
+  <div style="padding: 20px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h1 style="text-align: center; color: #2c3e50; margin-bottom: 40px;">TouchX UI Button 组件展示</h1>
+
+      <h2>基础用法 - 镂空透明效果</h2>
+      <div class="group">
+        <div class="demo-description">
+          ✨ 全新设计：透明背景 + 底部 2px 粗边框，悬停时有轻微背景色和边框颜色变化
+        </div>
+        <TxButton>默认按钮</TxButton>
+        <TxButton type="primary">主要按钮</TxButton>
+        <TxButton type="success">成功按钮</TxButton>
+        <TxButton type="info">信息按钮</TxButton>
+        <TxButton type="warning">警告按钮</TxButton>
+        <TxButton type="danger">危险按钮</TxButton>
+      </div>
 
     <h2>禁用状态</h2>
     <div class="group">
@@ -36,12 +42,18 @@ const handleClick = () => {
 
     <h2>文字按钮</h2>
     <div class="group">
+      <div class="demo-description">
+        📝 文字按钮：无边框，悬停时底部出现淡色下划线效果
+      </div>
       <TxButton type="text">文字按钮</TxButton>
-      <TxButton type="text" disabled>文字按钮</TxButton>
+      <TxButton type="text" disabled>禁用文字按钮</TxButton>
     </div>
 
     <h2>朴素按钮</h2>
     <div class="group">
+      <div class="demo-description">
+        🎨 朴素按钮：带有轻微背景色的镂空效果，悬停时背景色加深，底部边框颜色变化
+      </div>
       <TxButton plain>朴素按钮</TxButton>
       <TxButton type="primary" plain>主要按钮</TxButton>
       <TxButton type="success" plain>成功按钮</TxButton>
@@ -94,16 +106,33 @@ const handleClick = () => {
       <TxButton type="danger" vibrate-type="error">错误震动</TxButton>
       <TxButton type="info" :vibrate="false">无震动</TxButton>
     </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
 h2 {
-  margin: 20px 0 10px 0;
-  color: #333;
+  margin: 30px 0 15px 0;
+  color: #2c3e50;
+  font-weight: 600;
+  border-left: 4px solid #409eff;
+  padding-left: 12px;
 }
 
 .group {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 添加一些说明文字样式 */
+.demo-description {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.5;
 }
 </style>
