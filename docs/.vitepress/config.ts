@@ -4,7 +4,7 @@ import { sidebar } from './config/sidebar'
 export default defineConfig({
   title: 'TouchX UI',
   description: 'Beautiful Touchable Animations · A lifelike Vue3 component library',
-  base: '/',
+  base: '/touchx-ui/',
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/touchx-logo-transparent.png' }],
     ['meta', { name: 'theme-color', content: '#ff6b6b' }],
