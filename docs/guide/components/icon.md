@@ -365,7 +365,7 @@ TouchX UI 内置了丰富的图标库，包含以下分类：
 - facebook, twitter, instagram
 
 ### 更多图标
-查看完整的图标列表，请访问 [图标库页面](/icons/)。
+查看完整的图标列表，请访问 [图标库页面](/icons/index)。
 
 ## 最佳实践
 
